@@ -44,3 +44,7 @@ span{
     background-repeat: no-repeat;
     background-image: url('https://i.pinimg.com/originals/de/40/8c/de408c8c2e7f7c376cbc239ad2254189.png');
     overflow: hidden;}
+    .sky{
+        width: 500px;
+        height: 50px;
+    }

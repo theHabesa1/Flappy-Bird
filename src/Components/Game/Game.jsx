@@ -102,11 +102,13 @@ console.log('jUMP_FORCE')
         <div   className={styles.Bird} style={{ top: birdPosition}}><img width={BIRD_SIZE} height={BIRD_SIZE} src='UI/bird.png'/> </div>
             <div className={styles.Tube} style={{top:0, height: tubeHeight, width:TUBE_WIDTH, left: tubeLeft }}><img width={TUBE_WIDTH} height={tubeHeight} src='UI/tube1.png'/> </div>
             <div className={styles.Tube} style={{top: 500-(tubeHeight+bottomTubeHeight), width: TUBE_WIDTH, height: bottomTubeHeight, left: tubeLeft }}><img width={TUBE_WIDTH} height={bottomTubeHeight} src='UI/tube.png'/> </div>
-
+        
         </div>
         </div>
-        <button onClick={handleClick
-        }>FLAP!</button></div>
+       <div className={styles.sky} ><img className={styles.sky} src='UI/sky.png'/></div>
+        <button onClick={handleClick}>FLAP!</button>
+    
+        </div>
     )
 }
 export default Game
