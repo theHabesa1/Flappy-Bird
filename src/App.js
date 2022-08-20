@@ -1,23 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Game from "./Components/Game/Game";
+import Menu from "./Components/Menu/Menu";
+import React from "react";
 function App() {
+    const [isPlaying, setIsPlaying]=React.useState(false)
+    const [mScore, setMScore]=React.useState(0)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+        {isPlaying? <Game play={()=>setIsPlaying(!isPlaying)} scor={(score)=>setMScore(score)}/> :  <Menu mScore={mScore}  onSus={()=>setIsPlaying(!isPlaying)}/>}
     </div>
   );
 }

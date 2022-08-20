@@ -1,0 +1,46 @@
+
+.gameWrapper {
+    display: flex;
+
+    justify-content: center;
+
+
+}
+
+
+
+
+
+.Bird{
+
+    position:absolute;
+
+    height: 20px;
+    width: 20px;
+
+    border-radius: 50px;
+}
+
+
+.Tube{
+    position: relative;
+    margin:0;
+    padding: 0px;
+    width: 70px;
+
+    height:100px;
+
+}
+span{
+    z-index:1000;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.Game{
+    height: 500px;
+    width: 500px;
+    background-position: center;
+    background-clip: inherit;
+    background-repeat: no-repeat;
+    background-image: url('https://i.pinimg.com/originals/de/40/8c/de408c8c2e7f7c376cbc239ad2254189.png');
+    overflow: hidden;}
