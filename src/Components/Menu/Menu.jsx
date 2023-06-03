@@ -6,10 +6,10 @@ function    Menu ({onSus, mScore}){
     }
     return (
         <div className={styles.menuWrapper}>
-        <h1>FLAPPY BIRD</h1>
+        <h1>FLAPPY AB</h1>
             {mScore ?   <h1>Your Result: {mScore}</h1> : null }
             <img width={200}
-                 height={200} src="UI/bird.png"/>
+                 height={200} src="https://i.imgur.com/mjWeLOe.png"/>
         <button onClick={sus}>PLAY </button>
         </div>
     )

@@ -1,5 +1,7 @@
 import styles from './Game.module.css'
 import {useEffect, useState} from "react";
+
+
 function Game({play, scor}){
  function asus(){
      play()
@@ -93,22 +95,39 @@ console.log('jUMP_FORCE')
 
     console.log(score)
 
-    return(
+    return (
         <div>
-        <div  className={styles.gameWrapper}>
-
-        <div className={styles.Game}>
-            <span style={{position: 'absolute',}}>{score}</span>
-        <div   className={styles.Bird} style={{ top: birdPosition}}><img width={BIRD_SIZE} height={BIRD_SIZE} src='UI/bird.png'/> </div>
-            <div className={styles.Tube} style={{top:0, height: tubeHeight, width:TUBE_WIDTH, left: tubeLeft }}><img width={TUBE_WIDTH} height={tubeHeight} src='UI/tube1.png'/> </div>
-            <div className={styles.Tube} style={{top: 500-(tubeHeight+bottomTubeHeight), width: TUBE_WIDTH, height: bottomTubeHeight, left: tubeLeft }}><img width={TUBE_WIDTH} height={bottomTubeHeight} src='UI/tube.png'/> </div>
-        
+          <div className={styles.gameWrapper}>
+            <div className={styles.Game}>
+              <span style={{ position: 'absolute' }}>{score}</span>
+              <div className={styles.Bird} style={{ top: birdPosition }}>
+                <img width={BIRD_SIZE} height={BIRD_SIZE} src="https://i.imgur.com/mjWeLOe.png"  />
+              </div>
+              <div
+                className={styles.Tube}
+                style={{ top: 0, height: tubeHeight, width: TUBE_WIDTH, left: tubeLeft }}
+              >
+                <img width={TUBE_WIDTH} height={tubeHeight} src='https://i.imgur.com/6wkYC65.png'  />
+              </div>
+              <div
+                className={styles.Tube}
+                style={{
+                  top: 500 - (tubeHeight + bottomTubeHeight),
+                  width: TUBE_WIDTH,
+                  height: bottomTubeHeight,
+                  left: tubeLeft,
+                }}
+              >
+                <img width={TUBE_WIDTH} height={bottomTubeHeight} src='https://i.imgur.com/3ulQOFC.png'  />
+              </div>
+            </div>
+          </div>
+          <div className={styles.sky}>
+            <img className={styles.sky} src='https://i.imgur.com/9lLv1i8.png' />
+          </div>
+          <button onClick={handleClick}>FLAP!</button>
         </div>
-        </div>
-       <div className={styles.sky} ><img className={styles.sky} src='UI/sky.png'/></div>
-        <button onClick={handleClick}>FLAP!</button>
-    
-        </div>
-    )
+      );
+      
 }
 export default Game
